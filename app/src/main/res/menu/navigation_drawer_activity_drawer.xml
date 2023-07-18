@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/cma"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_audition"
+            android:icon="@drawable/ic_audition"
+            android:title="Auditions" />
+
+        <item
+            android:id="@+id/nav_backstage_jobs"
+            android:icon="@drawable/find_job"
+            android:title="Backstage Jobs" />
+
+<!--        <item-->
+<!--            android:id="@+id/nav_jobs"-->
+<!--            android:icon="@drawable/ic_jobs"-->
+<!--            android:title="Jobs" />-->
+
+        <item
+            android:id="@+id/nav_portfolio"
+            android:icon="@drawable/ic_portfolio"
+            android:title="Portfolio" />
+
+        <item
+            android:id="@+id/nav_post_call"
+            android:icon="@drawable/ic_call"
+            android:title="Post Casting Call" />
+
+        <item
+            android:id="@+id/nav_find_talent"
+            android:icon="@drawable/ic_contest"
+            android:title="Find Talent" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title=" User Profile" />
+
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/round_phone_white_18dp"
+            android:title="Contact Us"/>
+
+
+        <item
+            android:id="@+id/nav_create_profile"
+            android:icon="@drawable/cma"
+            android:title="@string/create_profile">
+            <menu>
+                <item
+                    android:id="@+id/nav_models"
+                    android:title="Models"
+                    android:icon="@drawable/ic_models"/>
+                <item
+                    android:id="@+id/nav_actors"
+                    android:title="Actors"
+                    android:icon="@drawable/ic_actor"/>
+                <item
+                    android:id="@+id/nav_freelancer"
+                    android:title="Freelancers"
+                    android:icon="@drawable/ic_freelancer"/>
+                <item
+                    android:id="@+id/nav_crew"
+                    android:title="Crew Members"
+                    android:icon="@drawable/ic_staff"/>
+                <item
+                    android:id="@+id/nav_content_staff"
+                    android:title="Content Creation Staff"
+                    android:icon="@drawable/ic_content"/>
+                <item
+                    android:id="@+id/nav_dancer"
+                    android:title="Dancers / Choreographer"
+                    android:icon="@drawable/ic_dancer"/>
+                <item
+                    android:id="@+id/nav_technical"
+                    android:title="Technical Staff"
+                    android:icon="@drawable/ic_technical"/>
+                <item
+                    android:id="@+id/nav_internship"
+                    android:title="Looking For Internship"
+                    android:icon="@drawable/ic_internship"/>
+
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/nav_find_jobs"
+            android:title="@string/find_jobs">
+            <menu>
+                <item
+                    android:id="@+id/nav_models_job"
+                    android:title="Models"
+                    android:icon="@drawable/ic_models"/>
+                <item
+                    android:id="@+id/nav_actors_job"
+                    android:title="Actors"
+                    android:icon="@drawable/ic_actor"/>
+                <item
+                    android:id="@+id/nav_content_staff_job"
+                    android:title="Content Creation Staff"
+                    android:icon="@drawable/ic_content"/>
+                <item
+                    android:id="@+id/nav_voice_job"
+                    android:title="Voice Over Artist"
+                    android:icon="@drawable/cma"/>
+                <item
+                    android:id="@+id/nav_crew_job"
+                    android:title="Staff / Crew Members"
+                    android:icon="@drawable/ic_staff"/>
+                <item
+                    android:id="@+id/nav_dancer_job"
+                    android:title="Dancers / Choreographer"
+                    android:icon="@drawable/ic_dancer"/>
+                <item
+                    android:id="@+id/nav_singer_job"
+                    android:title="Singer"
+                    android:icon="@drawable/ic_singer"/>
+                <item
+                    android:id="@+id/nav_technical_job"
+                    android:title="Technical Staff"
+                    android:icon="@drawable/ic_technical"/>
+                <item
+                    android:id="@+id/nav_internship_job"
+                    android:title="Free Internship"
+                    android:icon="@drawable/ic_internship"/>
+
+            </menu>
+        </item>
+
+    </group>
+</menu>

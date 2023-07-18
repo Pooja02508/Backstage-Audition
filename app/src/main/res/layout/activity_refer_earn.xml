@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auditionActivities.ReferEarnActivity"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_nav_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/appBar">
+
+                <ImageView
+                    android:id="@+id/santa_img"
+                    android:layout_width="180dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_alignParentLeft="true" />
+
+                <ImageView
+                    android:id="@+id/backstage_icon"
+                    android:layout_width="200dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center"
+                    android:layout_alignParentRight="true" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:src="@drawable/tag_line"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/backstage_icon"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="190dp"
+                                android:layout_marginLeft="-20dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/voucher_gif"/>
+
+                            <ImageView
+                                android:id="@+id/refer_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="-12dp"
+                                android:src="@drawable/share_app_earn_money"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1.5"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center">
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="How it works?"-->
+<!--                                android:padding="5dp"-->
+<!--                                android:textSize="12dp"-->
+<!--                                android:gravity="center"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:textColor="@color/blue" />-->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:padding="5dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/whatsapp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="50dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Step 1"
+                                        android:layout_marginLeft="5dp"
+                                        android:textSize="10dp"
+                                        android:gravity="center"
+                                        android:textColor="@color/white"
+                                        android:background="@color/black"/>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Invite via Whatsapp\n"
+                                        android:padding="5dp"
+                                        android:textSize="12dp"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/black" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:padding="5dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/whatsapp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="50dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Step 2"
+                                        android:textSize="10dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:gravity="center"
+                                        android:textColor="@color/white"
+                                        android:background="@color/black"/>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Your friends open Backstage Audition Account"
+                                        android:padding="5dp"
+                                        android:textSize="12dp"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/black" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:padding="5dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/whatsapp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="50dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Step 3"
+                                        android:textSize="10dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:gravity="center"
+                                        android:textColor="@color/white"
+                                        android:background="@color/black"/>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="You will receive your voucher in 2 to 7 days"
+                                        android:padding="5dp"
+                                        android:textSize="12dp"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/black" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="For more information click on Referral Rewards"
+                        android:padding="2dp"
+                        android:textSize="12dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="**This information is only for consumption by the client &amp; such material should not be redistributed. "
+                        android:padding="2dp"
+                        android:textSize="11dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Offer applicable only on new links generated from here"
+                        android:padding="2dp"
+                        android:textSize="12dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Use below Referral Code to refer your friends to\nBackstage Auditions and get rewarded"
+                        android:padding="2dp"
+                        android:textSize="13dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/text_border">
+
+                        <TextView
+                            android:id="@+id/copy_paste"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="&#x2398; 200000BAC"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="SHARE"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@color/blue"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/shareLink"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:textSize="13dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#075E54"
+                        android:textColor="@color/white"
+                        android:text="&#9990; Share link via whatsapp"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Terms and Conditions"
+                            android:layout_marginLeft="8dp"
+                            android:textSize="12dp"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FAQs"
+                            android:textSize="12dp"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/black"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="5dp"
+                        app:cardCornerRadius="5dp"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:padding="8dp"
+                                android:src="@drawable/ic_gift" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="Referral Reward"
+                                android:textColor="@color/black"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="₹ 0*"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="@color/black"/>
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:padding="8dp"
+                                    android:src="@drawable/ic_next"
+                                    android:layout_alignParentRight="true" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="5dp"
+                        app:cardCornerRadius="5dp"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:padding="8dp"
+                                android:src="@drawable/ic_pending" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="Pending Referrals"
+                                android:textColor="@color/black"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="0 Invites"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="@color/black"/>
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:padding="8dp"
+                                    android:src="@drawable/ic_next"
+                                    android:layout_alignParentRight="true" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/refer_bg"
+                    android:text="*This reflects your lifetime referral reward"
+                    android:textColor="@color/black"/>
+
+                <LinearLayout
+                    android:id="@+id/adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="50dp">
+
+                    <FrameLayout
+                        android:id="@+id/fl_adplaceholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/register_now"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_above="@id/bottom_nav_view"
+        android:orientation="horizontal"
+        android:background="@drawable/btn_bg"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/alert_gif"
+            android:layout_toEndOf="@id/register_now"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="-5dp"
+            android:layout_gravity="center"
+            android:layout_above="@id/bottom_nav_view"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Now"
+            android:textSize="11dp"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:paddingLeft="5dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/white"
+            android:layout_above="@id/bottom_nav_view" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/create_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_above="@id/bottom_nav_view"
+        android:orientation="horizontal"
+        android:background="@drawable/btn_bg"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@id/register_now">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:src="@drawable/message_gif"
+            android:layout_toEndOf="@id/register_now"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="-5dp"
+            android:layout_gravity="center"
+            android:layout_above="@id/bottom_nav_view"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Portfolio"
+            android:textSize="11dp"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:paddingLeft="5dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/white"
+            android:layout_above="@id/bottom_nav_view" />
+
+    </LinearLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/live_chat"
+        android:layout_width="72dp"
+        android:layout_height="30dp"
+        android:src="@drawable/live_chat"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@id/bottom_nav_view"
+        android:layout_alignParentRight="true"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/fab"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="-15dp"
+        android:layout_above="@id/bottom_nav_view"
+        android:layout_marginBottom="-12dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/chatbot_gif"/>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_nav_view" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/purple_700"
+        android:layout_alignParentBottom="true"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
+        app:menu="@menu/bottom_menu" />
+
+</RelativeLayout>

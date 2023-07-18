@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BackstageAuditionCasting"
+        tools:targetApi="31">
+
+
+        <activity android:name=".auditionActivities.AgeAuditionsFemaleActivity" />
+        <activity android:name=".auditionActivities.SelectGenderActivity" />
+        <activity android:name=".auditionActivities.AgeAuditionsActivity" />
+        <activity android:name=".auditionActivities.AuditionsDetailActivity" />
+        <activity android:name=".auditionActivities.FemalePorfolioActivity" />
+        <activity android:name=".auditionActivities.MalePorfolioActivity" />
+        <activity android:name=".auditionActivities.MaleAudition" />
+        <activity android:name=".auditionActivities.FemaleAudition" />
+        <activity android:name=".auditionActivities.AuditionForYoung" />
+        <activity android:name=".auditionActivities.AuditionsAgeActivity"/>
+        <activity android:name=".auditionActivities.PortfolioPassport" />
+        <activity android:name=".auditionActivities.AuditionByAge" />
+        <activity android:name=".auditionActivities.PortfolioActivity" />
+        <activity android:name=".jobs.JobsDescription" />
+        <activity android:name=".jobs.BackstageJobs" />
+        <activity android:name=".jobs.JobsActivity" />
+        <activity android:name=".jobs.FindJobActivity" />
+        <activity android:name=".jobs.VoiceOverJobs" />
+        <activity android:name=".jobs.JobsDetailsActivity" />
+        <activity android:name=".activities.ChatbotActivity" />
+        <activity android:name=".activities.EditProfile" />
+        <activity android:name=".activities.ReferEarnActivity" />
+        <activity android:name=".activities.MyPlans" />
+        <activity android:name=".activities.ThankYouActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.WebViewActivity" />
+        <activity android:name=".MainActivity" />
+
+        <activity
+            android:name=".NavigationDrawer"
+            android:exported="true"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/Theme.BackstageAuditionCasting.NoActionBar" />
+        <activity
+            android:name=".activities.SecondActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6208373148447455~8392914502" />
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+    </application>
+
+</manifest>

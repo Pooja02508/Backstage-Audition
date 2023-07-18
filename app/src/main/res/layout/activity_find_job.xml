@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".jobs.FindJobActivity"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_nav_view"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/santa_img"
+                    android:layout_width="180dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_alignParentLeft="true" />
+
+                <ImageView
+                    android:id="@+id/backstage_icon"
+                    android:layout_width="200dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center"
+                    android:layout_alignParentRight="true" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:src="@drawable/tag_line"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/backstage_icon"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Find a Job"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_margin="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Continue with -"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:id="@+id/google_btn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/rzp_white_border_black_bg">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/google_icon"
+                        android:padding="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Google"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:padding="5dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OR"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full name"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/fullName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="What is your name?"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/text_color"
+                android:inputType="textCapWords"
+                android:background="@drawable/jobs_border" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email ID"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <EditText
+                android:id="@+id/emailId"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Tell us your Email ID"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/text_color"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/jobs_border" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We'll send you relevant jobs in your mail"
+                android:textSize="12dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/text_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Create a password for your account"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/text_color"
+                android:background="@drawable/jobs_border" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Minimum 8 characters required"
+                android:textSize="12dp"
+                android:textColor="@color/text_color"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mobile number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <EditText
+                android:id="@+id/mobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="+91 Mobile Number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:textColorHint="@color/text_color"
+                android:background="@drawable/jobs_border" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recruiters will call you on this number"
+                android:textSize="12dp"
+                android:textColor="@color/text_color"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Work status"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/experienced"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/text_border"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="I'm experienced"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="I have work experience\n(excluding internships)"
+                            android:textSize="14dp"
+                            android:textColor="@color/text_color"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_bag"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fresher"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/text_border"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="I'm a fresher"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="I am a student/ Haven't worked after graduation"
+                            android:textSize="14dp"
+                            android:textColor="@color/text_color"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_fresher"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Current City"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/currentCity"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Mention the city you live in"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/text_color"
+                android:background="@drawable/jobs_border" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resume"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/jobs_border"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp">
+
+                <Button
+                    android:id="@+id/uploadResume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Resume"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"/>
+
+                <TextView
+                    android:id="@+id/resumeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DOC, DOCx, PDF, RTF | Max:2 MB"
+                    android:textSize="14dp"
+                    android:textColor="@color/text_color"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recruiters give first preference to candidates who have a resume"
+                android:textSize="12dp"
+                android:textColor="@color/text_color"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send me important updates on WhatsApp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:checked="true"/>
+
+
+            <Button
+                android:id="@+id/registerNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register Now"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"/>
+
+            <LinearLayout
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true">
+
+                <FrameLayout
+                    android:id="@+id/fl_adplaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/register_now"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_above="@id/bottom_nav_view"
+        android:orientation="horizontal"
+        android:background="@drawable/btn_bg"
+        android:layout_margin="5dp">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/alert_gif"
+            android:layout_toEndOf="@id/register_now"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="-5dp"
+            android:layout_gravity="center"
+            android:layout_above="@id/bottom_nav_view"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Now"
+            android:textSize="11dp"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:paddingLeft="5dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/white"
+            android:layout_above="@id/bottom_nav_view" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/create_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_above="@id/bottom_nav_view"
+        android:orientation="horizontal"
+        android:background="@drawable/btn_bg"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@id/register_now">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:src="@drawable/message_gif"
+            android:layout_toEndOf="@id/register_now"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="-5dp"
+            android:layout_gravity="center"
+            android:layout_above="@id/bottom_nav_view"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Portfolio"
+            android:textSize="11dp"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:paddingLeft="5dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/white"
+            android:layout_above="@id/bottom_nav_view" />
+
+    </LinearLayout>
+
+  <pl.droidsonroids.gif.GifImageView
+         android:id="@+id/live_chat"
+         android:layout_width="72dp"
+         android:layout_height="30dp"
+         android:src="@drawable/live_chat"
+         android:layout_marginBottom="5dp"
+        android:layout_above="@id/bottom_nav_view"
+        android:layout_alignParentRight="true"/>
+
+     <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/fab"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="-15dp"
+        android:layout_above="@id/bottom_nav_view"
+        android:layout_marginBottom="-12dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/chatbot_gif"/>
+     <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_nav_view" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/purple_700"
+        android:layout_alignParentBottom="true"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
+        app:menu="@menu/bottom_menu" />
+
+
+
+</RelativeLayout>

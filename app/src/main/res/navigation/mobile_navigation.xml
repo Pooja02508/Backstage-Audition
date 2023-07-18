@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="casting.movie.audition.fragments.DashboardFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_audition"
+        android:name="casting.movie.audition.fragments.CastingAuditionFragment"
+        android:label="Auditions"
+        tools:layout="@layout/fragment_casting_audition" />
+
+    <fragment
+        android:id="@+id/nav_backstage_jobs"
+        android:name="casting.movie.audition.fragments.BackstageJobsFragment"
+        android:label="Backstage Jobs"
+        tools:layout="@layout/fragment_backstage_jobs" />
+
+<!--    <fragment-->
+<!--        android:id="@+id/nav_jobs"-->
+<!--        android:name="casting.movie.audition.Fragments.JobsFragment"-->
+<!--        android:label="Jobs"-->
+<!--        tools:layout="@layout/fragment_jobs" />-->
+
+    <fragment
+        android:id="@+id/nav_portfolio"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Portfolio"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_post_call"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Post Casting Call"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_find_talent"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Find Talent"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="casting.movie.audition.fragments.ProfileFragment"
+        android:label="User Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_contact_us"
+        android:name="casting.movie.audition.fragments.ContactUsFragment"
+        android:label="Contact Us"
+        tools:layout="@layout/fragment_contact_us" />
+
+    <fragment
+        android:id="@+id/nav_models"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Models"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_actors"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Actors"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_freelancer"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Freelancers"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_crew"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Crew Members"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_content_staff"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Content Creation Staff"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_dancer"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Dancers / Choreographer"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_technical"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Technical Staff"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_internship"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Looking For Internship"
+        tools:layout="@layout/fragment_home" />
+
+
+
+    <fragment
+        android:id="@+id/nav_models_job"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Models"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_actors_job"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Actors"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_content_staff_job"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Content Creation Staff"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_voice_job"
+        android:name="casting.movie.audition.fragments.VoiceJobsFragment"
+        android:label="Voice Over Artist"
+        tools:layout="@layout/fragment_voice_jobs" />
+
+    <fragment
+        android:id="@+id/nav_crew_job"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Staff / Crew Members"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_dancer_job"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Dancers / Choreographer"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_singer_job"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Singer"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_technical_job"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Technical Staff"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_internship_job"
+        android:name="casting.movie.audition.fragments.HomeFragment"
+        android:label="Free Internship"
+        tools:layout="@layout/fragment_home" />
+
+
+
+
+    <fragment
+        android:id="@+id/bottom_nav_home"
+        android:name="casting.movie.audition.fragments.DashboardFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/bottom_nav_audition"
+        android:name="casting.movie.audition.fragments.AuditionsFragment"
+        android:label="Auditions"
+        tools:layout="@layout/fragment_auditions" />
+
+    <fragment
+        android:id="@+id/bottom_nav_contest"
+        android:name="casting.movie.audition.fragments.BackstageJobsFragment"
+        android:label="Jobs"
+        tools:layout="@layout/fragment_backstage_jobs" />
+
+    <fragment
+        android:id="@+id/bottom_nav_profile"
+        android:name="casting.movie.audition.fragments.ProfileFragment"
+        android:label="User Profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

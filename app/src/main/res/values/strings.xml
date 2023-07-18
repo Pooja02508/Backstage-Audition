@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Backstage Audition</string>
+
+    <string name="ad_attribution">Ad</string>
+
+    <string name="ADMOB_ADS_UNIT_ID">ca-app-pub-6208373148447455/7340537348</string>
+
+    <string name="login">Already Have Account? <u>Login Here</u></string>
+
+    <string name="signup">Don\'t Have Account? <u>Sign Up</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_navigation_drawer">Backstage Audition</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Backstage Audition</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Backstage Audition</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="create_profile"><b><font color='#0000FF'>Create Profile / Portfolio</font></b></string>
+    <string name="find_jobs"><b><font color='#0000FF'>Find Jobs</font></b></string>
+
+    <string name="jobs">When it comes to movie production, there are numerous job roles and responsibilities involved in different stages of the process. Here\'s a list of some key production jobs in the film industry:
+\n\n1. <b>Producer:</b> Oversees all aspects of the film production, from development to distribution.
+\n2. <b>Director:</b> Responsible for interpreting the script, guiding actors, and overseeing the creative vision of the film.
+\n3. <b>Screenwriter:</b> Writes or adapts the screenplay, which serves as the blueprint for the film.
+\n4. <b>Cinematographer/Director of Photography (DP):</b> Handles the visual aspects of the film, including camera operation, lighting, and shot composition.
+\n5. <b>Production Designer:</b> Designs the overall visual style of the film, including sets, locations, props, and costumes.
+\n6. <b>Art Director:</b> Works closely with the production designer to oversee the art department and ensure the visual consistency of the film.
+\n7. <b>Costume Designer:</b> Creates or selects costumes for the cast, ensuring they align with the characters and the film\'s visual style.
+\n8. <b>Casting Director:</b> Conducts auditions and selects actors for the film\'s roles.
+\n9. <b>Production Manager:</b> Handles the logistical aspects of the production, including budgeting, scheduling, and coordinating various departments.
+\n10. <b>Assistant Director (AD):</b> Assists the director on set, ensuring the production runs smoothly and according to schedule.
+\n11. <b>Editor:</b> Assembles and edits the footage, making creative choices to shape the final film.
+\n12. <b>Sound Designer:</b> Creates and designs the film\'s sound elements, including sound effects, foley, and overall audio ambiance.
+\n13. <b>Composer:</b> Creates the original score or selects music to enhance the film\'s emotional impact.
+\n14. <b>Visual Effects (VFX) Supervisor:</b> Oversees the creation and integration of visual effects into the film.
+\n15. <b>Production Sound Mixer:</b> Captures high-quality audio on set, including dialogue and ambient sounds.
+\n16. <b>Grip:</b> Assists the camera department with equipment setup, rigging, and camera movement.
+\n17. <b>Gaffer:</b> Handles lighting equipment and works closely with the cinematographer to achieve the desired lighting effects.
+\n18. <b>Production Assistant (PA):</b> Provides support to various departments, performing tasks such as running errands, setting up equipment, or managing paperwork.
+
+    </string>
+
+</resources>

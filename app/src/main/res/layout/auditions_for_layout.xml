@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/babies_audition"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/jobs_border">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actors"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="13dp"/>
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="209+ Jobs Available"
+            android:textAllCaps="true"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:maxLines="1"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/jobs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="45+ Internship/Trainee Jobs"
+            android:textAllCaps="true"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:maxLines="1"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

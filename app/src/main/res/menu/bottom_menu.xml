@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_nav_home"
+        android:icon="@drawable/cma"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/bottom_nav_audition"
+        android:icon="@drawable/ic_audition"
+        android:title="Auditions" />
+
+    <item
+        android:id="@+id/bottom_nav_contest"
+        android:icon="@drawable/ic_contest"
+        android:title="Jobs" />
+
+    <item
+        android:id="@+id/bottom_nav_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="Profile" />
+</menu>

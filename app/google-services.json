@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "78654318544",
+    "firebase_url": "https://casting-movie-audition-adeaf-default-rtdb.firebaseio.com",
+    "project_id": "casting-movie-audition-adeaf",
+    "storage_bucket": "casting-movie-audition-adeaf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78654318544:android:13feec379c78838340bbd5",
+        "android_client_info": {
+          "package_name": "casting.movie.audition"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78654318544-8ga8ft3g57ggni6c5k48crflt9vsjniq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "casting.movie.audition",
+            "certificate_hash": "3c1338c98b04e876e3403984f57cca4f44e0fa1e"
+          }
+        },
+        {
+          "client_id": "78654318544-lsrhepvp7ift4v2n4eu7etggd68odc3h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdYTE5YkiMfNL894on6yZ5ysx_G3FVwJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78654318544-fnnirri2ue6ptvt2mt7h6egh76hj98sg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
