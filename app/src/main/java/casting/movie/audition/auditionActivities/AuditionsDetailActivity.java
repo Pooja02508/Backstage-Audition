@@ -472,7 +472,6 @@ public class AuditionsDetailActivity extends AppCompatActivity implements HomeAd
             case 14:startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://app.backstageaudition.com/contents/en-us/p35_Backstage-modeling-jobs.html")));
                 break;
 
-
         }
 
     }
