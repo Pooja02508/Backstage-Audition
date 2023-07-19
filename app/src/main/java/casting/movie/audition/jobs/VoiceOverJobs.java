@@ -47,7 +47,7 @@ public class VoiceOverJobs extends AppCompatActivity implements AuditionAdapter.
     RecyclerView recyclerView;
     ArrayList<Auditions> auditionsArrayList=new ArrayList<>();
     ImageView portfolioImg,clickImg,backstage_icon,santa_img;
-   GifImageView fab,live_chat;
+    GifImageView fab,live_chat;
     LinearLayout register_now,create_profile;
 
     @Override
@@ -233,8 +233,7 @@ public class VoiceOverJobs extends AppCompatActivity implements AuditionAdapter.
             auditionsArrayList.add(new Auditions("Costume Jewelry Maker Jobs","https://images.backstageaudition.com/costume_jewelry_maker.png"));
             auditionsArrayList.add(new Auditions("Distressing Artist Jobs","https://images.backstageaudition.com/distressing_artist.png"));
             auditionsArrayList.add(new Auditions("Costume Breakdown Shoemaker/Cobbler Jobs","https://images.backstageaudition.com/costume_breakdown_shoemaker.png"));
-            auditionsArrayList.add(new Auditions("Costume Breakdown Jobs","https://images.backstageaudition.com/costume_breakdown.png"));
-            auditionsArrayList.add(new Auditions("Leatherworker Jobs","https://images.backstageaudition.com/leatherworker.png"));
+            auditionsArrayList.add(new Auditions("Costume Breakdown Leatherworker Jobs","https://images.backstageaudition.com/leatherworker.png"));
             auditionsArrayList.add(new Auditions("Costume Breakdown Textile Specialist Jobs","https://images.backstageaudition.com/costume_breakdown_textile_specialist.png"));
             auditionsArrayList.add(new Auditions("Costume Breakdown 3D Printer Technician Jobs","https://images.backstageaudition.com/costume_breakdown_3d_printer_technician.png"));
             auditionsArrayList.add(new Auditions("Costume Research Assistant Jobs","https://images.backstageaudition.com/costume_research_assistant.png"));
@@ -810,37 +809,34 @@ public class VoiceOverJobs extends AppCompatActivity implements AuditionAdapter.
                 case 23:intent.putExtra("DESCRIPTION","Costume Breakdown Shoemaker");
                     intent.putExtra("JobImage","https://images.backstageaudition.com/costume_breakdown_shoemaker_desc.png");
                     break;
-                case 24:intent.putExtra("DESCRIPTION","Costume Breakdown");
-                    intent.putExtra("JobImage","https://images.backstageaudition.com/costume_breakdown_desc.png");
-                    break;
-                case 25:intent.putExtra("DESCRIPTION","Leatherworker");
+                case 24:intent.putExtra("DESCRIPTION","Costume Leatherworker Breakdown");
                     intent.putExtra("JobImage","https://images.backstageaudition.com/leatherworker_desc.png");
                     break;
-                case 26:intent.putExtra("DESCRIPTION","Costume Breakdown Textile Specialist");
+                case 25:intent.putExtra("DESCRIPTION","Costume Breakdown Textile Specialist");
                     intent.putExtra("JobImage","https://images.backstageaudition.com/costume_breakdown_textile_specialist_desc.png");
                     break;
-                case 27:intent.putExtra("DESCRIPTION","Costume Breakdown 3d Printer Technician");
+                case 26:intent.putExtra("DESCRIPTION","Costume Breakdown 3d Printer Technician");
                     intent.putExtra("JobImage","https://images.backstageaudition.com/costume_breakdown_3d_printer_technician_desc.png");
                     break;
-                case 28:intent.putExtra("DESCRIPTION","Costume Research Assistant");
+                case 27:intent.putExtra("DESCRIPTION","Costume Research Assistant");
                     intent.putExtra("JobImage","https://images.backstageaudition.com/costume_research_assistant_desc.png");
                     break;
-                case 29:intent.putExtra("DESCRIPTION","Costume Supervisor For Visual Effects");
+                case 28:intent.putExtra("DESCRIPTION","Costume Supervisor For Visual Effects");
                     intent.putExtra("JobImage","https://images.backstageaudition.com/costume_supervisor_for_visual_effects_desc.png");
                     break;
-                case 30:intent.putExtra("DESCRIPTION","Costume Photographer");
+                case 29:intent.putExtra("DESCRIPTION","Costume Photographer");
                     intent.putExtra("JobImage","https://images.backstageaudition.com/costume_photographer_desc.png");
                     break;
-                case 31:intent.putExtra("DESCRIPTION","Costume Consultant");
+                case 30:intent.putExtra("DESCRIPTION","Costume Consultant");
                     intent.putExtra("JobImage","https://images.backstageaudition.com/costume_consultant_desc.png");
                     break;
-                case 32:intent.putExtra("DESCRIPTION","Costume 3d Modeler");
+                case 31:intent.putExtra("DESCRIPTION","Costume 3d Modeler");
                     intent.putExtra("JobImage","https://images.backstageaudition.com/costume_3d_modeler_desc.png");
                     break;
-                case 33:intent.putExtra("DESCRIPTION","Costume Embroiderer");
+                case 32:intent.putExtra("DESCRIPTION","Costume Embroiderer");
                     intent.putExtra("JobImage","https://images.backstageaudition.com/costume_embroiderer_desc.png");
                     break;
-                case 34:intent.putExtra("DESCRIPTION","Costume Warehouse Manager");
+                case 33:intent.putExtra("DESCRIPTION","Costume Warehouse Manager");
                     intent.putExtra("JobImage","https://images.backstageaudition.com/costume_warehouse_manager_desc.png");
                     break;
             }

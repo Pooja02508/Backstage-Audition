@@ -800,7 +800,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="★ Casting Agents  Worldwide…"
+                        android:text="★ Casting Agents Worldwide…"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         android:gravity="center"
@@ -1172,7 +1172,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="20dp">
 
                 <FrameLayout
                     android:id="@+id/fl_adplaceholder6"

@@ -11,8 +11,8 @@ android {
         applicationId "casting.movie.audition"
         minSdk 31
         targetSdk 33
-        versionCode 37
-        versionName "37.0"
+        versionCode 38
+        versionName "38.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
