@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -39,6 +41,9 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ContactUs product = auditionsList.get(position);
+
+        Animation animation = AnimationUtils.loadAnimation(mCtx, R.anim.blink_animation);
+        holder.buttonImg.startAnimation(animation);
 
         Glide.with(mCtx).load(product.getImage()).into(holder.buttonImg);
         Glide.with(mCtx).load(product.getGif_image()).into(holder.image);

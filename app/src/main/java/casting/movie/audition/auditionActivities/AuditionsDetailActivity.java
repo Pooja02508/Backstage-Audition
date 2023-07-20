@@ -215,19 +215,20 @@ public class AuditionsDetailActivity extends AppCompatActivity implements HomeAd
         recyclerView.setAdapter(adapter);
         adapter.setClickListener(this);
 
-        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-youtube-channel.gif","https://images.backstageaudition.com/backstage-youtube-channel.png"));
-        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-instagram.gif","https://images.backstageaudition.com/backstage-audition-instagram.png"));
         auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-facebook.gif","https://images.backstageaudition.com/backstage-audition-and-casting-facebook.png"));
-        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-twitter.gif","https://images.backstageaudition.com/backstage-audition-and-casting-twitter.png"));
-        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-call.gif","https://images.backstageaudition.com/backstage-audition-and-casting-call.png"));
-        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-address.gif","http://backstageaudition.com/contents/backstage-audition-and-casting-address.png"));
+        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-address-youtube-channel.gif","https://images.backstageaudition.com/backstage-youtube-channel.png"));
+        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-instagram.gif","https://images.backstageaudition.com/backstage-audition-instagram.png"));
         auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-email-address.gif","https://images.backstageaudition.com/backstage-audition-and-casting-email-address.png"));
+        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-call.gif","https://images.backstageaudition.com/backstage-audition-and-casting-call.png"));
+        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-telegram-channel.gif","https://images.backstageaudition.com/backstage-audition-and-casting-telegram-channel.png"));
+        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-address.gif","https://images.backstageaudition.com/backstage-audition-and-casting-address.png"));
+        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-contact-number.gif","https://images.backstageaudition.com/backstage-audition-and-casting-contact-number.png"));
         auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-mobile-application.gif","https://images.backstageaudition.com/backstage-audition-and-casting-mobile-application.png"));
+        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/Backstage-Audition-and-Casting-twitter.gif","https://images.backstageaudition.com/backstage-audition-and-casting-twitter.png"));
+        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/Backstage-audition-and-casting-TikTok.gif","https://images.backstageaudition.com/backstage-audition-and-casting-tiktok.png"));
         auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-linkedin.gif","https://images.backstageaudition.com/backstage-audition-and-casting-linkedin.png"));
-        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/call-backstage-audition-and-casting.gif","https://images.backstageaudition.com/call-backstage-audition-and-casting.png"));
-        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-live-chat.gif","https://images.backstageaudition.com/backstage-audition-and-casting-live-chat.png"));
 
-        int numberOfColumn = 3;
+        int numberOfColumn = 2;
         recyclerView2.setLayoutManager(new GridLayoutManager(getApplicationContext(), numberOfColumn));
         ContactAdapter adapter2 = new ContactAdapter(getApplicationContext(),auditionsArrayList2);
         recyclerView2.setAdapter(adapter2);

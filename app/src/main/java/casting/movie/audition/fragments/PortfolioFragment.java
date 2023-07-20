@@ -26,65 +26,64 @@ import com.google.android.gms.ads.formats.MediaView;
 import com.google.android.gms.ads.formats.NativeAdOptions;
 import com.google.android.gms.ads.formats.UnifiedNativeAd;
 import com.google.android.gms.ads.formats.UnifiedNativeAdView;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 import casting.movie.audition.R;
 import casting.movie.audition.activities.ChatbotActivity;
+import casting.movie.audition.jobs.FindJobActivity;
+import casting.movie.audition.jobs.VoiceOverJobs;
 import casting.movie.audition.models.Auditions;
-import casting.movie.audition.models.AuditonsForAdapter;
-import casting.movie.audition.models.ContactAdapter;
-import casting.movie.audition.models.ContactUs;
-import casting.movie.audition.models.HomeAdapter;
+import casting.movie.audition.models.BackstageJobAdapter;
 import pl.droidsonroids.gif.GifImageView;
 
-public class ContactUsFragment extends Fragment {
+public class PortfolioFragment extends Fragment implements BackstageJobAdapter.ItemClickListener{
 
-    ArrayList<ContactUs> auditionsArrayList=new ArrayList<>();
-    RecyclerView recyclerView;
     ImageView backstage_icon,santa_img;
+    private UnifiedNativeAd nativeAd;
+    RecyclerView recyclerView;
+    ArrayList<Auditions> auditionsArrayList=new ArrayList<>();
     GifImageView fab,live_chat;
     LinearLayout register_now,create_profile;
-    private UnifiedNativeAd nativeAd;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root= inflater.inflate(R.layout.fragment_contact_us, container, false);
+        View root= inflater.inflate(R.layout.fragment_portfolio, container, false);
 
-        fab=root.findViewById(R.id.fab);
-        live_chat=root.findViewById(R.id.live_chat);
         backstage_icon=root.findViewById(R.id.backstage_icon);
         santa_img=root.findViewById(R.id.santa_img);
-        register_now=root.findViewById(R.id.register_now);
-        create_profile=root.findViewById(R.id.create_profile);
-        recyclerView=root.findViewById(R.id.recyclerView);
         Picasso.with(getActivity()).load("https://images.backstageaudition.com/backstage_new1.png").fit().into(backstage_icon);
         Picasso.with(getActivity()).load("https://images.backstageaudition.com/backstage_new2.png").fit().into(santa_img);
+        fab = root.findViewById(R.id.fab);
+        live_chat=root.findViewById(R.id.live_chat);
+        register_now=root.findViewById(R.id.register_now);
+        create_profile=root.findViewById(R.id.create_profile);
+        // Glide.with(this).load("https://images.backstageaudition.com/chat_gif.gif").into(fab);
 
-        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-facebook.gif","https://images.backstageaudition.com/backstage-audition-and-casting-facebook.png"));
-        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-address-youtube-channel.gif","https://images.backstageaudition.com/backstage-youtube-channel.png"));
-        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-instagram.gif","https://images.backstageaudition.com/backstage-audition-instagram.png"));
-        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-email-address.gif","https://images.backstageaudition.com/backstage-audition-and-casting-email-address.png"));
-        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-call.gif","https://images.backstageaudition.com/backstage-audition-and-casting-call.png"));
-        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-telegram-channel.gif","https://images.backstageaudition.com/backstage-audition-and-casting-telegram-channel.png"));
+        recyclerView=root.findViewById(R.id.recyclerView);
 
-        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-address.gif","https://images.backstageaudition.com/backstage-audition-and-casting-address.png"));
-        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-contact-number.gif","https://images.backstageaudition.com/backstage-audition-and-casting-contact-number.png"));
-        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-mobile-application.gif","https://images.backstageaudition.com/backstage-audition-and-casting-mobile-application.png"));
-        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/Backstage-Audition-and-Casting-twitter.gif","https://images.backstageaudition.com/backstage-audition-and-casting-twitter.png"));
-        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/Backstage-audition-and-casting-TikTok.gif","https://images.backstageaudition.com/backstage-audition-and-casting-tiktok.png"));
-        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-linkedin.gif","https://images.backstageaudition.com/backstage-audition-and-casting-linkedin.png"));
+        auditionsArrayList.add(new Auditions("Portfolio","https://images.backstageaudition.com/findjob_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
+        auditionsArrayList.add(new Auditions("\uD83D\uDDE3Voice ▶ Audio \uD83C\uDFB5 Sound","https://images.backstageaudition.com/voice_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
+        auditionsArrayList.add(new Auditions("♪ Music","https://images.backstageaudition.com/music_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
+        auditionsArrayList.add(new Auditions("Makeup & Hair","https://images.backstageaudition.com/makeup_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
+        auditionsArrayList.add(new Auditions("Costumes","https://images.backstageaudition.com/costume_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
+        auditionsArrayList.add(new Auditions("Direction","https://images.backstageaudition.com/direction_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
+        auditionsArrayList.add(new Auditions("Acting","https://images.backstageaudition.com/acting_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
+        auditionsArrayList.add(new Auditions("Action","https://images.backstageaudition.com/action_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
+        auditionsArrayList.add(new Auditions("Dance","https://images.backstageaudition.com/dance_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
+        auditionsArrayList.add(new Auditions("Editing","https://images.backstageaudition.com/editing_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
+        auditionsArrayList.add(new Auditions("Camera / Production","https://images.backstageaudition.com/camera_production_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
+        auditionsArrayList.add(new Auditions("Other Jobs","https://images.backstageaudition.com/aotherjobs_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
+        auditionsArrayList.add(new Auditions("Marketing","https://images.backstageaudition.com/marketing_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
 
-
-        int numberOfColumns = 2;
+        int numberOfColumns = 3;
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), numberOfColumns));
-        ContactAdapter adapter = new ContactAdapter(getActivity(),auditionsArrayList);
+        BackstageJobAdapter adapter = new BackstageJobAdapter(getActivity(),auditionsArrayList);
         recyclerView.setAdapter(adapter);
-
+        adapter.setClickListener(this);
 
         register_now.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,7 +97,6 @@ public class ContactUsFragment extends Fragment {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XW2MLM3LS4UF6")));
             }
         });
-
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -144,6 +142,54 @@ public class ContactUsFragment extends Fragment {
 
         return root;
     }
+    @Override
+    public void onItemClick(View view, int position) {
+
+        Intent intent=new Intent(getActivity(), VoiceOverJobs.class);
+
+        switch (position){
+            case 0:startActivity(new Intent(getActivity(), FindJobActivity.class));
+                break;
+            case 1:intent.putExtra("Job Title","Voice Job");
+                startActivity(intent);
+                break;
+            case 2:intent.putExtra("Job Title","Music Job");
+                startActivity(intent);
+                break;
+            case 3:intent.putExtra("Job Title","Makeup Job");
+                startActivity(intent);
+                break;
+            case 4:intent.putExtra("Job Title","Costume Job");
+                startActivity(intent);
+                break;
+            case 5:intent.putExtra("Job Title","Direction Job");
+                startActivity(intent);
+                break;
+            case 6:intent.putExtra("Job Title","Acting Job");
+                startActivity(intent);
+                break;
+            case 7:intent.putExtra("Job Title","Action Job");
+                startActivity(intent);
+                break;
+            case 8:intent.putExtra("Job Title","Dance Job");
+                startActivity(intent);
+                break;
+            case 9:intent.putExtra("Job Title","Editing Job");
+                startActivity(intent);
+                break;
+            case 10:intent.putExtra("Job Title","Camera Production Job");
+                startActivity(intent);
+                break;
+            case 11:intent.putExtra("Job Title","Other Job");
+                startActivity(intent);
+                break;
+            case 12:intent.putExtra("Job Title","Marketing Job");
+                startActivity(intent);
+                break;
+        }
+
+    }
+
     private void populateUnifiedNativeAdView(UnifiedNativeAd nativeAd, UnifiedNativeAdView adView) {
 
         adView.setMediaView((MediaView) adView.findViewById(R.id.ad_media));
