@@ -110,13 +110,16 @@ public class JobsDescription extends AppCompatActivity {
         String DESCRIPTION=getIntent().getStringExtra("DESCRIPTION");
         String JobImage=getIntent().getStringExtra("JobImage");
 
-        job_desc.setText(DESCRIPTION+" jobs are available on backstageaudition.com.❤️  If you are searching for "+DESCRIPTION+" jobs near you, then you are at the right place. Apply to the "+DESCRIPTION+" job around the world, read the "+DESCRIPTION+" job description, and apply for "+DESCRIPTION+" jobs near you. click buttons below for more information");
-        Picasso.with(this).load(JobImage).into(dubbing_artist_desc);
+        if (DESCRIPTION.equals("Portfolio")){
+            job_desc.setText(DESCRIPTION+" are available on backstageaudition.com.❤️  If you are searching for "+DESCRIPTION+" near you, then you are at the right place. Apply to the "+DESCRIPTION+" around the world, read the "+DESCRIPTION+" description, and apply for "+DESCRIPTION+" near you. click buttons below for more information");
+            Picasso.with(this).load("https://images.backstageaudition.com/portfolio_icon.png").into(dubbing_artist_desc);
+        }
+        else{
+            job_desc.setText(DESCRIPTION+" jobs are available on backstageaudition.com.❤️  If you are searching for "+DESCRIPTION+" jobs near you, then you are at the right place. Apply to the "+DESCRIPTION+" job around the world, read the "+DESCRIPTION+" job description, and apply for "+DESCRIPTION+" jobs near you. click buttons below for more information");
+            Picasso.with(this).load(JobImage).into(dubbing_artist_desc);
+        }
 
 
-//        Picasso.with(this).load("https://images.backstageaudition.com/talent_img.png").fit().into(portfolioImg);
-//        Picasso.with(this).load("https://images.backstageaudition.com/click_img.png").fit().into(clickImg);
-       // Glide.with(this).load("https://images.backstageaudition.com/chat_gif.gif").into(fab);
         Picasso.with(this).load("https://images.backstageaudition.com/backstage_new1.png").fit().into(backstage_icon);
         Picasso.with(this).load("https://images.backstageaudition.com/backstage_new2.png").fit().into(santa_img);
         Picasso.with(this).load("https://images.backstageaudition.com/portfolio_bg.png").fit().into(portfolio_bg);

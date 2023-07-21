@@ -33,6 +33,7 @@ import java.util.ArrayList;
 import casting.movie.audition.R;
 import casting.movie.audition.activities.ChatbotActivity;
 import casting.movie.audition.jobs.FindJobActivity;
+import casting.movie.audition.jobs.JobsDescription;
 import casting.movie.audition.jobs.VoiceOverJobs;
 import casting.movie.audition.models.Auditions;
 import casting.movie.audition.models.BackstageJobAdapter;
@@ -65,19 +66,19 @@ public class PortfolioFragment extends Fragment implements BackstageJobAdapter.I
 
         recyclerView=root.findViewById(R.id.recyclerView);
 
-        auditionsArrayList.add(new Auditions("Portfolio","https://images.backstageaudition.com/findjob_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
-        auditionsArrayList.add(new Auditions("\uD83D\uDDE3Voice ▶ Audio \uD83C\uDFB5 Sound","https://images.backstageaudition.com/voice_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
-        auditionsArrayList.add(new Auditions("♪ Music","https://images.backstageaudition.com/music_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
-        auditionsArrayList.add(new Auditions("Makeup & Hair","https://images.backstageaudition.com/makeup_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
-        auditionsArrayList.add(new Auditions("Costumes","https://images.backstageaudition.com/costume_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
-        auditionsArrayList.add(new Auditions("Direction","https://images.backstageaudition.com/direction_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
-        auditionsArrayList.add(new Auditions("Acting","https://images.backstageaudition.com/acting_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
-        auditionsArrayList.add(new Auditions("Action","https://images.backstageaudition.com/action_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
-        auditionsArrayList.add(new Auditions("Dance","https://images.backstageaudition.com/dance_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
-        auditionsArrayList.add(new Auditions("Editing","https://images.backstageaudition.com/editing_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
-        auditionsArrayList.add(new Auditions("Camera / Production","https://images.backstageaudition.com/camera_production_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
-        auditionsArrayList.add(new Auditions("Other Jobs","https://images.backstageaudition.com/aotherjobs_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
-        auditionsArrayList.add(new Auditions("Marketing","https://images.backstageaudition.com/marketing_gif.gif","135+ Jobs Available","45+ Internships/Trainee Jobs"));
+        auditionsArrayList.add(new Auditions("Portfolio","https://images.backstageaudition.com/findjob_gif.gif","135+ Portfolio Available",""));
+        auditionsArrayList.add(new Auditions("\uD83D\uDDE3Voice ▶ Audio \uD83C\uDFB5 Sound","https://images.backstageaudition.com/voice_gif.gif","135+ Portfolio Available",""));
+        auditionsArrayList.add(new Auditions("♪ Music","https://images.backstageaudition.com/music_gif.gif","135+ Portfolio Available",""));
+        auditionsArrayList.add(new Auditions("Makeup & Hair","https://images.backstageaudition.com/makeup_gif.gif","135+ Portfolio Available",""));
+        auditionsArrayList.add(new Auditions("Costumes","https://images.backstageaudition.com/costume_gif.gif","135+ Portfolio Available",""));
+        auditionsArrayList.add(new Auditions("Direction","https://images.backstageaudition.com/direction_gif.gif","135+ Portfolio Available",""));
+        auditionsArrayList.add(new Auditions("Acting","https://images.backstageaudition.com/acting_gif.gif","135+ Portfolio Available",""));
+        auditionsArrayList.add(new Auditions("Action","https://images.backstageaudition.com/action_gif.gif","135+ Portfolio Available",""));
+        auditionsArrayList.add(new Auditions("Dance","https://images.backstageaudition.com/dance_gif.gif","135+ Portfolio Available",""));
+        auditionsArrayList.add(new Auditions("Editing","https://images.backstageaudition.com/editing_gif.gif","135+ Portfolio Available",""));
+        auditionsArrayList.add(new Auditions("Camera / Production","https://images.backstageaudition.com/camera_production_gif.gif","135+ Portfolio Available",""));
+        auditionsArrayList.add(new Auditions("Other Jobs","https://images.backstageaudition.com/aotherjobs_gif.gif","135+ Portfolio Available",""));
+        auditionsArrayList.add(new Auditions("Marketing","https://images.backstageaudition.com/marketing_gif.gif","135+ Portfolio Available",""));
 
         int numberOfColumns = 3;
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), numberOfColumns));
@@ -148,7 +149,10 @@ public class PortfolioFragment extends Fragment implements BackstageJobAdapter.I
         Intent intent=new Intent(getActivity(), VoiceOverJobs.class);
 
         switch (position){
-            case 0:startActivity(new Intent(getActivity(), FindJobActivity.class));
+            case 0:Intent intent2=new Intent(getActivity(), JobsDescription.class);
+                intent2.putExtra("DESCRIPTION","Portfolio");
+                intent2.putExtra("JobImage","https://images.backstageaudition.com/find_job.png");
+                startActivity(intent2);
                 break;
             case 1:intent.putExtra("Job Title","Voice Job");
                 startActivity(intent);
