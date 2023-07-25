@@ -110,14 +110,10 @@ public class JobsDescription extends AppCompatActivity {
         String DESCRIPTION=getIntent().getStringExtra("DESCRIPTION");
         String JobImage=getIntent().getStringExtra("JobImage");
 
-        if (DESCRIPTION.equals("Portfolio")){
-            job_desc.setText(DESCRIPTION+" are available on backstageaudition.com.❤️  If you are searching for "+DESCRIPTION+" near you, then you are at the right place. Apply to the "+DESCRIPTION+" around the world, read the "+DESCRIPTION+" description, and apply for "+DESCRIPTION+" near you. click buttons below for more information");
-            Picasso.with(this).load("https://images.backstageaudition.com/portfolio_icon.png").into(dubbing_artist_desc);
-        }
-        else{
-            job_desc.setText(DESCRIPTION+" jobs are available on backstageaudition.com.❤️  If you are searching for "+DESCRIPTION+" jobs near you, then you are at the right place. Apply to the "+DESCRIPTION+" job around the world, read the "+DESCRIPTION+" job description, and apply for "+DESCRIPTION+" jobs near you. click buttons below for more information");
-            Picasso.with(this).load(JobImage).into(dubbing_artist_desc);
-        }
+
+        job_desc.setText(DESCRIPTION+" jobs are available on backstageaudition.com.❤️  If you are searching for "+DESCRIPTION+" jobs near you, then you are at the right place. Apply to the "+DESCRIPTION+" job around the world, read the "+DESCRIPTION+" job description, and apply for "+DESCRIPTION+" jobs near you. click buttons below for more information");
+        Picasso.with(this).load(JobImage).into(dubbing_artist_desc);
+
 
 
         Picasso.with(this).load("https://images.backstageaudition.com/backstage_new1.png").fit().into(backstage_icon);
@@ -192,16 +188,16 @@ public class JobsDescription extends AppCompatActivity {
 //                startActivity(intent);
 //            }
 //        });
-        fab.setOnClickListener(new View.OnClickListener() {
+       fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), ChatbotActivity.class));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://my.artibot.ai/backstage")));
             }
         });
         live_chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), ChatbotActivity.class));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://my.artibot.ai/backstage")));
             }
         });
         backstage_share1.setOnClickListener(new View.OnClickListener() {

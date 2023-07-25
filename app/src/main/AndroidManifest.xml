@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -21,7 +22,8 @@
         android:theme="@style/Theme.BackstageAuditionCasting"
         tools:targetApi="31">
 
-
+        <activity android:name=".jobs.PortfolioJobs"/>
+        <activity android:name=".jobs.PortfolioDescription"/>
         <activity android:name=".auditionActivities.AgeAuditionsFemaleActivity" />
         <activity android:name=".auditionActivities.SelectGenderActivity" />
         <activity android:name=".auditionActivities.AgeAuditionsActivity" />
@@ -31,7 +33,7 @@
         <activity android:name=".auditionActivities.MaleAudition" />
         <activity android:name=".auditionActivities.FemaleAudition" />
         <activity android:name=".auditionActivities.AuditionForYoung" />
-        <activity android:name=".auditionActivities.AuditionsAgeActivity"/>
+        <activity android:name=".auditionActivities.AuditionsAgeActivity" />
         <activity android:name=".auditionActivities.PortfolioPassport" />
         <activity android:name=".auditionActivities.AuditionByAge" />
         <activity android:name=".auditionActivities.PortfolioActivity" />
@@ -50,7 +52,6 @@
         <activity android:name=".activities.RegisterActivity" />
         <activity android:name=".activities.WebViewActivity" />
         <activity android:name=".MainActivity" />
-
         <activity
             android:name=".NavigationDrawer"
             android:exported="true"

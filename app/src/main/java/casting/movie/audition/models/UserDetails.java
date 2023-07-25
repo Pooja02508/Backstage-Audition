@@ -2,18 +2,19 @@ package casting.movie.audition.models;
 
 public class UserDetails {
 
-    private String userName,userMobile,userAge,userEmail,userPassword,userAddress;
+    private String userName,userMobile,userAge,userEmail,userPassword,userAddress,joiningTime;
 
     public UserDetails() {
 
     }
-    public UserDetails(String userName, String userAge, String userMobile, String userEmail, String userPassword, String userAddress) {
+    public UserDetails(String userName, String userAge, String userMobile, String userEmail, String userPassword, String userAddress,String joiningTime) {
         this.userName = userName;
         this.userAge = userAge;
         this.userMobile = userMobile;
         this.userEmail = userEmail;
         this.userPassword=userPassword;
         this.userAddress=userAddress;
+        this.joiningTime=joiningTime;
     }
 
     public String getUserName() {
@@ -63,5 +64,13 @@ public class UserDetails {
 
     public void setUserAddress(String userAddress) {
         this.userAddress = userAddress;
+    }
+
+    public String getJoiningTime() {
+        return joiningTime;
+    }
+
+    public void setJoiningTime(String joiningTime) {
+        this.joiningTime = joiningTime;
     }
 }

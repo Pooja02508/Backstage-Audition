@@ -64,8 +64,8 @@ public class NavigationDrawer extends AppCompatActivity {
 
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_audition,R.id.nav_profile,R.id.nav_portfolio,R.id.nav_post_call,R.id.nav_find_talent,R.id.nav_backstage_jobs,R.id.nav_contact_us,
-                R.id.nav_models,R.id.nav_actors,R.id.nav_freelancer,R.id.nav_crew,R.id.nav_content_staff,R.id.nav_dancer,R.id.nav_technical,R.id.nav_internship,
+                R.id.nav_home, R.id.nav_audition,R.id.nav_profile,R.id.nav_portfolio,R.id.nav_post_call,R.id.nav_find_talent,R.id.nav_backstage_jobs,R.id.nav_contact_us,R.id.nav_content_creator,
+                R.id.nav_models,R.id.nav_actors,R.id.nav_freelancer,R.id.nav_crew,R.id.nav_content_staff,R.id.nav_dancer,R.id.nav_technical,R.id.nav_internship,R.id.nav_influencer,
                 R.id.nav_models_job,R.id.nav_actors_job,R.id.nav_content_staff_job,R.id.nav_voice_job,R.id.nav_crew_job,R.id.nav_dancer_job,R.id.nav_singer_job,R.id.nav_technical_job,R.id.nav_internship_job,
                 R.id.bottom_nav_home, R.id.bottom_nav_contest, R.id.bottom_nav_audition,R.id.bottom_nav_profile)
                 .setOpenableLayout(drawer)
@@ -85,6 +85,7 @@ public class NavigationDrawer extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.backstageaudition.com")));
             }
         });
+
 
     }
 

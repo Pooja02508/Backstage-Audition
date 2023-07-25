@@ -71,16 +71,18 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/edittext_border" >
 
-            <TextView
+            <com.hbb20.CountryCodePicker
+                app:ccp_defaultNameCode="IND"
+                android:id="@+id/country_code"
                 android:layout_width="wrap_content"
-                android:layout_height="55dp"
-                android:hint="+91"
-                android:textColor="@color/white"
-                android:textColorHint="@color/black"
-                android:textSize="15dp"
-                android:padding="10dp"
-                android:inputType="phone"
-                android:enabled="false"/>
+                android:layout_height="wrap_content"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_showFlag="false"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:ccp_showNameCode="false"
+                app:ccp_showFullName="false">
+            </com.hbb20.CountryCodePicker>
 
             <View
                 android:layout_width="1dp"

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -51,14 +52,15 @@ public class AuditionAdapter extends RecyclerView.Adapter<AuditionAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        TextView title;
+        Button title;
         ImageView image;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.title);
             image = itemView.findViewById(R.id.image);
-            itemView.setOnClickListener(this);
+            title.setOnClickListener(this);
+            image.setOnClickListener(this);
         }
 
         @Override

@@ -40,6 +40,16 @@
             android:title="Find Talent" />
 
         <item
+            android:id="@+id/nav_influencer"
+            android:icon="@drawable/ic_contest"
+            android:title="Influencer" />
+
+        <item
+            android:id="@+id/nav_content_creator"
+            android:icon="@drawable/ic_contest"
+            android:title="Content Creator" />
+
+        <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_profile"
             android:title=" User Profile" />

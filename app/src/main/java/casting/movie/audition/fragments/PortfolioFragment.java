@@ -34,6 +34,8 @@ import casting.movie.audition.R;
 import casting.movie.audition.activities.ChatbotActivity;
 import casting.movie.audition.jobs.FindJobActivity;
 import casting.movie.audition.jobs.JobsDescription;
+import casting.movie.audition.jobs.PortfolioDescription;
+import casting.movie.audition.jobs.PortfolioJobs;
 import casting.movie.audition.jobs.VoiceOverJobs;
 import casting.movie.audition.models.Auditions;
 import casting.movie.audition.models.BackstageJobAdapter;
@@ -98,16 +100,16 @@ public class PortfolioFragment extends Fragment implements BackstageJobAdapter.I
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XW2MLM3LS4UF6")));
             }
         });
-        fab.setOnClickListener(new View.OnClickListener() {
+       fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), ChatbotActivity.class));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://my.artibot.ai/backstage")));
             }
         });
         live_chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), ChatbotActivity.class));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://my.artibot.ai/backstage")));
             }
         });
 
@@ -146,10 +148,10 @@ public class PortfolioFragment extends Fragment implements BackstageJobAdapter.I
     @Override
     public void onItemClick(View view, int position) {
 
-        Intent intent=new Intent(getActivity(), VoiceOverJobs.class);
+        Intent intent=new Intent(getActivity(), PortfolioJobs.class);
 
         switch (position){
-            case 0:Intent intent2=new Intent(getActivity(), JobsDescription.class);
+            case 0:Intent intent2=new Intent(getActivity(), PortfolioDescription.class);
                 intent2.putExtra("DESCRIPTION","Portfolio");
                 intent2.putExtra("JobImage","https://images.backstageaudition.com/find_job.png");
                 startActivity(intent2);

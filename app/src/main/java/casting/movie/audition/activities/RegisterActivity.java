@@ -29,7 +29,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.hbb20.CountryCodePicker;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 
 import javax.mail.Authenticator;
@@ -58,10 +61,12 @@ public class RegisterActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     UserDetails userDetails;
+    CountryCodePicker codePicker;
 
     GoogleSignInOptions googleSignInOptions;
     GoogleSignInClient googleSignInClient;
     ImageView googleBtn;
+    String currentDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +81,7 @@ public class RegisterActivity extends AppCompatActivity {
         username=findViewById(R.id.username);
         mobile=findViewById(R.id.mobileNumber);
         pass=findViewById(R.id.password);
+        codePicker=findViewById(R.id.country_code);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -86,6 +92,9 @@ public class RegisterActivity extends AppCompatActivity {
         String UserLocation=getIntent().getStringExtra("UserLocation");
         userLocation.setText(""+UserLocation);
         sp = getSharedPreferences("login",MODE_PRIVATE);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd");
+        currentDate = sdf.format(new Date());
 
 
         login_here.setOnClickListener(new View.OnClickListener() {
@@ -149,14 +158,14 @@ public class RegisterActivity extends AppCompatActivity {
                     {
                         if (task.isSuccessful()) {
 
-                            String phone="+91"+mobile.getText().toString();
-
+                            String country_code=codePicker.getSelectedCountryCode();
+                            String phone = "+"+country_code+mobile.getText().toString();
                             userDetails.setUserName(username.getText().toString());
                             userDetails.setUserEmail(emailId.getText().toString());
                             userDetails.setUserAddress(userLocation.getText().toString());
-                            userDetails.setUserMobile(mobile.getText().toString());
+                            userDetails.setUserMobile(phone);
                             userDetails.setUserPassword(pass.getText().toString());
-
+                            userDetails.setJoiningTime(currentDate);
 
                             databaseReference.child("UserDetails").addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
@@ -256,7 +265,8 @@ public class RegisterActivity extends AppCompatActivity {
             String stringReceiverEmail = emailId.getText().toString();
             String stringAdminEmail = "joinstarcircle@gmail.com";
             String stringPasswordSenderEmail = "skrtxwylsvjukvqz";
-
+            String country_code=codePicker.getSelectedCountryCode();
+            String phone = "+"+country_code+mobile.getText().toString();
             String stringHost = "smtp.gmail.com";
 
             Properties properties = System.getProperties();
@@ -279,8 +289,12 @@ public class RegisterActivity extends AppCompatActivity {
 
 
             mimeMessage.setSubject("Backstage Audition and Casting Registration");
-            mimeMessage.setText("Hello "+ username.getText().toString()+"\nYou have successfully registered in Backstage Audition and Casting.\n User Email Id: "+emailId.getText().toString()+
-                    "\n User Mobile Number: "+mobile.getText().toString()+"\n User Password: "+pass.getText().toString()+"\n User Address: " +userLocation.getText().toString());
+            mimeMessage.setText("Hello "+ username.getText().toString()+
+                    "\nYou have successfully registered in Backstage Audition and Casting.\n User Email Id: "+emailId.getText().toString()+
+                    "\n User Mobile Number: "+phone+
+                    "\n User Password: "+pass.getText().toString()+
+                    "\n User Address: " +userLocation.getText().toString()
+                    +"\n User Joining App Date: " +currentDate);
 
             Thread thread = new Thread(new Runnable() {
                 @Override

@@ -1,6 +1,8 @@
 package casting.movie.audition.fragments;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -17,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdLoader;
@@ -33,6 +36,7 @@ import java.util.ArrayList;
 
 import casting.movie.audition.R;
 import casting.movie.audition.activities.ChatbotActivity;
+import casting.movie.audition.activities.ReferEarnActivity;
 import casting.movie.audition.models.Auditions;
 import casting.movie.audition.models.AuditonsForAdapter;
 import casting.movie.audition.models.ContactAdapter;
@@ -40,7 +44,7 @@ import casting.movie.audition.models.ContactUs;
 import casting.movie.audition.models.HomeAdapter;
 import pl.droidsonroids.gif.GifImageView;
 
-public class ContactUsFragment extends Fragment {
+public class ContactUsFragment extends Fragment implements ContactAdapter.ItemClickListener{
 
     ArrayList<ContactUs> auditionsArrayList=new ArrayList<>();
     RecyclerView recyclerView;
@@ -71,19 +75,25 @@ public class ContactUsFragment extends Fragment {
         auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-email-address.gif","https://images.backstageaudition.com/backstage-audition-and-casting-email-address.png"));
         auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-call.gif","https://images.backstageaudition.com/backstage-audition-and-casting-call.png"));
         auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-telegram-channel.gif","https://images.backstageaudition.com/backstage-audition-and-casting-telegram-channel.png"));
-
         auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-address.gif","https://images.backstageaudition.com/backstage-audition-and-casting-address.png"));
         auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-contact-number.gif","https://images.backstageaudition.com/backstage-audition-and-casting-contact-number.png"));
         auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-mobile-application.gif","https://images.backstageaudition.com/backstage-audition-and-casting-mobile-application.png"));
         auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/Backstage-Audition-and-Casting-twitter.gif","https://images.backstageaudition.com/backstage-audition-and-casting-twitter.png"));
         auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/Backstage-audition-and-casting-TikTok.gif","https://images.backstageaudition.com/backstage-audition-and-casting-tiktok.png"));
         auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-linkedin.gif","https://images.backstageaudition.com/backstage-audition-and-casting-linkedin.png"));
+        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-whatsapp-number.gif","https://images.backstageaudition.com/backstage-audition-and-casting-whatsapp-number.png"));
+        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/Backstage-audition-and-casting-jobs.gif","https://images.backstageaudition.com/Backstage-audition-and-casting-jobs.png"));
+
+        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-portfolio.gif","https://app.backstageaudition.com/contents/media/backstage-audition-and-casting-portfolio.png"));
+        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-auditions-near-me.gif","https://app.backstageaudition.com/contents/media/backstage-auditions-near-me.png"));
+        auditionsArrayList.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-partnership.gif","https://app.backstageaudition.com/contents/media/backstage-audition-and-casting-partnership.png"));
 
 
         int numberOfColumns = 2;
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), numberOfColumns));
         ContactAdapter adapter = new ContactAdapter(getActivity(),auditionsArrayList);
         recyclerView.setAdapter(adapter);
+        adapter.setClickListener(this);
 
 
         register_now.setOnClickListener(new View.OnClickListener() {
@@ -102,13 +112,13 @@ public class ContactUsFragment extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), ChatbotActivity.class));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://my.artibot.ai/backstage")));
             }
         });
         live_chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), ChatbotActivity.class));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://my.artibot.ai/backstage")));
             }
         });
 
@@ -144,6 +154,49 @@ public class ContactUsFragment extends Fragment {
 
         return root;
     }
+
+    @Override
+    public void onItemClick(View view, int position) {
+        switch (position){
+            case 0: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/BackstageAudition/")));
+                break;
+            case 1: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/@Online.Audition")));
+                break;
+            case 2: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/backstageaudition/")));
+                break;
+            case 3: startActivity(new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + "Backstagehelpdesk@gmail.com")));
+                break;
+            case 4: String phone = "919112473657";
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
+                startActivity(intent);
+                break;
+            case 5: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me.backstageaudition/")));
+                break;
+            case 10:
+            case 6: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://app.backstageaudition.com/contents/en-us/contactus.html")));
+                break;
+            case 7: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://my.artibot.ai/backstage")));
+                break;
+            case 8: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=casting.movie.audition")));
+                break;
+            case 9: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/EcastingOnline")));
+                break;
+            case 11: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.linkedin.com/in/BackstageAudition")));
+                break;
+            case 12: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/919112473657?text=Hi")));
+                break;
+            case 13:startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("https://app.backstageaudition.com/contents/en-us/d169009_Find-Audition-and-Casting-a-job.html")));
+                break;
+            case 14:startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://a2zportfolio.com/contents/en-us/p2_Create-Portfolio-Online.html")));
+                break;
+            case 15:startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://app.backstageaudition.com/contents/en-us/d169007_Backstage-Audition-and-Casting-call.html")));
+                break;
+            case 16:startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://app.backstageaudition.com/contents/en-us/d169199_Backstage-Audition-and-Casting-partnership.html")));
+                break;
+        }
+    }
+
+
     private void populateUnifiedNativeAdView(UnifiedNativeAd nativeAd, UnifiedNativeAdView adView) {
 
         adView.setMediaView((MediaView) adView.findViewById(R.id.ad_media));
@@ -205,4 +258,6 @@ public class ContactUsFragment extends Fragment {
         }
         adView.setNativeAd(nativeAd);
     }
+
+
 }

@@ -11,8 +11,8 @@ android {
         applicationId "casting.movie.audition"
         minSdk 31
         targetSdk 33
-        versionCode 38
-        versionName "38.0"
+        versionCode 40
+        versionName "40.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -70,5 +70,5 @@ dependencies {
 
     implementation("com.google.firebase:firebase-storage")
 
-
+    implementation 'com.hbb20:ccp:2.6.0'
 }

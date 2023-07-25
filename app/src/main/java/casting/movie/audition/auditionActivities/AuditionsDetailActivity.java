@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -49,7 +50,7 @@ import casting.movie.audition.models.ContactUs;
 import casting.movie.audition.models.HomeAdapter;
 import pl.droidsonroids.gif.GifImageView;
 
-public class AuditionsDetailActivity extends AppCompatActivity implements HomeAdapter.ItemClickListener, View.OnClickListener{
+public class AuditionsDetailActivity extends AppCompatActivity implements HomeAdapter.ItemClickListener,View.OnClickListener{
 
     private UnifiedNativeAd nativeAd;
     ArrayList<Auditions> auditionsArrayList=new ArrayList<>();
@@ -227,11 +228,60 @@ public class AuditionsDetailActivity extends AppCompatActivity implements HomeAd
         auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/Backstage-Audition-and-Casting-twitter.gif","https://images.backstageaudition.com/backstage-audition-and-casting-twitter.png"));
         auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/Backstage-audition-and-casting-TikTok.gif","https://images.backstageaudition.com/backstage-audition-and-casting-tiktok.png"));
         auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-linkedin.gif","https://images.backstageaudition.com/backstage-audition-and-casting-linkedin.png"));
+        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-whatsapp-number.gif","https://images.backstageaudition.com/backstage-audition-and-casting-whatsapp-number.png"));
+        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/Backstage-audition-and-casting-jobs.gif","https://images.backstageaudition.com/Backstage-audition-and-casting-jobs.png"));
+        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-portfolio.gif","https://app.backstageaudition.com/contents/media/backstage-audition-and-casting-portfolio.png"));
+        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-auditions-near-me.gif","https://app.backstageaudition.com/contents/media/backstage-auditions-near-me.png"));
+        auditionsArrayList2.add(new ContactUs("https://images.backstageaudition.com/backstage-audition-and-casting-partnership.gif","https://app.backstageaudition.com/contents/media/backstage-audition-and-casting-partnership.png"));
+
 
         int numberOfColumn = 2;
         recyclerView2.setLayoutManager(new GridLayoutManager(getApplicationContext(), numberOfColumn));
         ContactAdapter adapter2 = new ContactAdapter(getApplicationContext(),auditionsArrayList2);
         recyclerView2.setAdapter(adapter2);
+
+        adapter2.setClickListener(new ContactAdapter.ItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                switch (position){
+                    case 0: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/BackstageAudition/")));
+                        break;
+                    case 1: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/@Online.Audition")));
+                        break;
+                    case 2: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/backstageaudition/")));
+                        break;
+                    case 3: startActivity(new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + "Backstagehelpdesk@gmail.com")));
+                        break;
+                    case 4: String phone = "919112473657";
+                        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
+                        startActivity(intent);
+                        break;
+                    case 5: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me.backstageaudition/")));
+                        break;
+                    case 10:
+                    case 6: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://app.backstageaudition.com/contents/en-us/contactus.html")));
+                        break;
+                    case 7: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://my.artibot.ai/backstage")));
+                        break;
+                    case 8: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=casting.movie.audition")));
+                        break;
+                    case 9: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/EcastingOnline")));
+                        break;
+                    case 11: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.linkedin.com/in/BackstageAudition")));
+                        break;
+                    case 12: startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/919112473657?text=Hi")));
+                        break;
+                    case 13:startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("https://app.backstageaudition.com/contents/en-us/d169009_Find-Audition-and-Casting-a-job.html")));
+                        break;
+                    case 14:startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://a2zportfolio.com/contents/en-us/p2_Create-Portfolio-Online.html")));
+                        break;
+                    case 15:startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://app.backstageaudition.com/contents/en-us/d169007_Backstage-Audition-and-Casting-call.html")));
+                        break;
+                    case 16:startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://app.backstageaudition.com/contents/en-us/d169199_Backstage-Audition-and-Casting-partnership.html")));
+                        break;
+                }
+            }
+        });
 
 
         acting_classes.setOnClickListener(this);
@@ -275,16 +325,16 @@ public class AuditionsDetailActivity extends AppCompatActivity implements HomeAd
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XW2MLM3LS4UF6")));
             }
         });
-        fab.setOnClickListener(new View.OnClickListener() {
+       fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), ChatbotActivity.class));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://my.artibot.ai/backstage")));
             }
         });
         live_chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), ChatbotActivity.class));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://my.artibot.ai/backstage")));
             }
         });
         create_online_portfolio.setOnClickListener(new View.OnClickListener() {

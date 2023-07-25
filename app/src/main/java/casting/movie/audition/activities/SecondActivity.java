@@ -40,14 +40,8 @@ public class SecondActivity extends AppCompatActivity {
     Button loginBtn,signUpBtn;
     SharedPreferences sp;
     public static String filename="userlogin";
-    public static String Uname="username";
-    public static String Upass="password";
     FusedLocationProviderClient fusedLocationProviderClient;
     private  final  static int REQUEST_CODE=100;
-
-    private static final int CAMERA_PERMISSION_CODE = 100;
-    private static final int STORAGE_PERMISSION_CODE = 101;
-
     String UserLocation;
 
 
@@ -62,18 +56,10 @@ public class SecondActivity extends AppCompatActivity {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new StepOneFragment());
         viewPager.setAdapter(viewPagerAdapter);
-//        TabLayout tabLayout = findViewById(R.id.tabLayoutIndicator);
-//        tabLayout.setupWithViewPager(viewPager);
-
-
         loginBtn=findViewById(R.id.loginBtn);
         signUpBtn=findViewById(R.id.signUpBtn);
         fusedLocationProviderClient= LocationServices.getFusedLocationProviderClient(this);
         getLastLocation();
-
-//        checkPermission(Manifest.permission.CAMERA, CAMERA_PERMISSION_CODE);
-//
-//        checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
 
         sp=getSharedPreferences(filename, Context.MODE_PRIVATE);
 
@@ -121,17 +107,6 @@ public class SecondActivity extends AppCompatActivity {
         }
     }
 
-//    public void checkPermission(String permission, int requestCode)
-//    {
-//        if (ContextCompat.checkSelfPermission(SecondActivity.this, permission) == PackageManager.PERMISSION_DENIED) {
-//
-//            ActivityCompat.requestPermissions(SecondActivity.this, new String[] { permission }, requestCode);
-//        }
-//        else {
-//            startActivity(new Intent(getApplicationContext(), SecondActivity.class));
-//        }
-//    }
-
     private void getLastLocation() {
         if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
 
@@ -145,9 +120,6 @@ public class SecondActivity extends AppCompatActivity {
                                 try {
                                     addresses = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
                                     UserLocation=addresses.get(0).getAddressLine(0);
-//                                    city.setText(addresses.get(0).getAddressLine(0));
-//                                    city.setText("City :"+addresses.get(0).getLocality());
-//                                    country.setText("Country :"+addresses.get(0).getCountryName());
                                 } catch (IOException e) {
                                     e.printStackTrace();
                                 }
@@ -175,16 +147,6 @@ public class SecondActivity extends AppCompatActivity {
             }
         }
 
-//        else if (requestCode == STORAGE_PERMISSION_CODE) {
-//            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                Intent intent=(new Intent(getApplicationContext(),SecondActivity.class));
-//                intent.putExtra("UserLocation",UserLocation);
-//                startActivity(intent);
-//                finish();
-//            } else {
-//                // Toast.makeText(MainActivity.this, "Storage Permission Denied", Toast.LENGTH_SHORT).show();
-//            }
-//        }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 

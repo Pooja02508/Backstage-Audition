@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/babies_audition"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="255dp"
         android:orientation="vertical"
         android:layout_margin="5dp"
         android:background="@color/white">
@@ -18,14 +18,15 @@
             android:layout_height="200dp"
             android:layout_gravity="center"/>
 
-        <TextView
+        <Button
             android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="★ Auditions and casting calls for babies"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/red"/>
     </LinearLayout>
 
 </LinearLayout>

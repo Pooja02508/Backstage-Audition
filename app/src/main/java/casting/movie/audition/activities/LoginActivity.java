@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +26,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.hbb20.CountryCodePicker;
 
 import casting.movie.audition.NavigationDrawer;
 import casting.movie.audition.R;
@@ -35,12 +37,13 @@ public class LoginActivity extends AppCompatActivity {
     TextView signup_here;
     SharedPreferences sp;
     private FirebaseAuth mAuth;
-    TextInputEditText pass,emailid,mobile;
+    TextInputEditText pass,emailid;
+    EditText mobile;
     Button login;
     String UserMobile;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference=firebaseDatabase.getInstance().getReference("UserDetails");
-
+    CountryCodePicker codePicker;
     GoogleSignInOptions googleSignInOptions;
     GoogleSignInClient googleSignInClient;
     ImageView googleBtn;
@@ -54,9 +57,9 @@ public class LoginActivity extends AppCompatActivity {
         signup_here=findViewById(R.id.signup_here);
         pass=findViewById(R.id.password);
         emailid=findViewById(R.id.username);
-        mobile=findViewById(R.id.mobile);
+        mobile=findViewById(R.id.mobileNumber);
         login=findViewById(R.id.login);
-
+        codePicker=findViewById(R.id.country_code);
 
         mAuth = FirebaseAuth.getInstance();
         sp = getSharedPreferences("login",MODE_PRIVATE);
@@ -149,7 +152,8 @@ public class LoginActivity extends AppCompatActivity {
                                     @NonNull Task<AuthResult> task)
                             {
                                 if (task.isSuccessful()) {
-                                    String phone="+91"+mobile.getText().toString();
+                                    String country_code=codePicker.getSelectedCountryCode();
+                                    String phone = "+"+country_code+mobile.getText().toString();
                                     Toast.makeText(getApplicationContext(), "Login successful!!", Toast.LENGTH_LONG).show();
                                     sp.edit().putBoolean("logged",true).apply();
                                     sp.edit().putString("UserMobile",phone).apply();
@@ -166,7 +170,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void goToMainActivity(){
-        String phone="+91"+mobile.getText().toString();
+        String country_code=codePicker.getSelectedCountryCode();
+        String phone =  "+"+country_code+mobile.getText().toString();
         Intent i = new Intent(LoginActivity.this, NavigationDrawer.class);
         sp.edit().putBoolean("logged",true).apply();
         sp.edit().putString("UserMobile",phone).apply();

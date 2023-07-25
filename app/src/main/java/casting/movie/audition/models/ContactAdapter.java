@@ -1,6 +1,8 @@
 package casting.movie.audition.models;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,4 +81,43 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
     public interface ItemClickListener {
         void onItemClick(View view, int position);
     }
+
+    public interface OnItemClickListener {
+        void onItemClick(View view, int position);
+    }
+
+    public static void onItemClick(View view, int position) {
+        switch (position){
+            case 0: view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/BackstageAudition/")));
+                break;
+            case 1: view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/@Online.Audition")));
+                break;
+            case 2: view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/backstageaudition/")));
+                break;
+            case 3: view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("Backstagehelpdesk@gmail.com")));
+                break;
+            case 4: view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("tel:+919112473657")));
+                break;
+            case 5: view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me.backstageaudition/")));
+                break;
+            case 6: view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://app.backstageaudition.com/contents/en-us/contactus.html")));
+                break;
+            case 7: view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://my.artibot.ai/backstage")));
+                break;
+            case 8: view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=casting.movie.audition")));
+                break;
+            case 9: view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/EcastingOnline")));
+                break;
+            case 10: view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("")));
+                break;
+            case 11: view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("")));
+                break;
+            case 12: view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/@Online.Audition")));
+                break;
+            case 13:view.getContext().startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("https://app.backstageaudition.com/contents/en-us/d169009_Find-Audition-and-Casting-a-job.html")));
+                break;
+        }
+
+    }
+
 }
