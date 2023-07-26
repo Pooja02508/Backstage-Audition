@@ -53,6 +53,8 @@ public class CrewMembersFragment extends Fragment implements ContactAdapter.Item
             modeling_agency,modeling_jobs,online_auditions,post_casting_call,media_jobs,become_affiliateagent,agents_managers,media_internship;
     ArrayList<ContactUs> auditionsArrayList=new ArrayList<>();
     RecyclerView recyclerView;
+    GifImageView gifview;
+    ImageView job_img;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -65,6 +67,13 @@ public class CrewMembersFragment extends Fragment implements ContactAdapter.Item
         fab = root.findViewById(R.id.fab);
         register_now=root.findViewById(R.id.register_now);
         create_profile=root.findViewById(R.id.create_profile);
+
+        gifview=root.findViewById(R.id.gifview);
+        job_img=root.findViewById(R.id.job_img);
+
+        Glide.with(getActivity()).load("https://images.backstageaudition.com/crew_member_gif.gif").into(cameraman_gif);
+        Picasso.with(getActivity()).load("https://images.backstageaudition.com/crew_member_image.png").fit().into(portfolio_icon);
+
 
         recyclerView=root.findViewById(R.id.recyclerView);
         backstage_mobile_img=root.findViewById(R.id.backstage_mobile_img);

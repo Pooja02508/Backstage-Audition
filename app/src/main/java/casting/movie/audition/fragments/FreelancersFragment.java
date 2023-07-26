@@ -53,6 +53,8 @@ public class FreelancersFragment extends Fragment implements ContactAdapter.Item
             modeling_agency,modeling_jobs,online_auditions,post_casting_call,media_jobs,become_affiliateagent,agents_managers,media_internship;
     ArrayList<ContactUs> auditionsArrayList=new ArrayList<>();
     RecyclerView recyclerView;
+    GifImageView gifview;
+    ImageView job_img;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -67,6 +69,13 @@ public class FreelancersFragment extends Fragment implements ContactAdapter.Item
         create_profile=root.findViewById(R.id.create_profile);
 
         recyclerView=root.findViewById(R.id.recyclerView);
+
+        gifview=root.findViewById(R.id.gifview);
+        job_img=root.findViewById(R.id.job_img);
+
+        Glide.with(getActivity()).load("https://images.backstageaudition.com/freelancers_gif.gif").into(cameraman_gif);
+        Picasso.with(getActivity()).load("https://images.backstageaudition.com/freelancers_image.png").fit().into(portfolio_icon);
+
         backstage_mobile_img=root.findViewById(R.id.backstage_mobile_img);
         superwomen_girl=root.findViewById(R.id.superwomen_girl);
         portfolio_icon=root.findViewById(R.id.portfolio_icon);

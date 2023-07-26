@@ -46,19 +46,18 @@
 
 
             <pl.droidsonroids.gif.GifImageView
-                android:id="@+id/gifView"
+                android:id="@+id/gifview"
                 android:layout_width="230dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="10dp"
-                android:layout_gravity="center"
-                android:src="@drawable/gifview"/>
+                android:layout_gravity="center" />
 
             <ImageView
+                android:id="@+id/job_img"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:layout_marginBottom="5dp"
                 android:layout_gravity="center"
-                android:src="@drawable/influencer"
                 android:layout_marginTop="-3dp"/>
 
             <TextView
