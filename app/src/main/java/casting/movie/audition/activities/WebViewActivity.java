@@ -50,8 +50,8 @@ public class WebViewActivity extends AppCompatActivity {
         backstage_icon=findViewById(R.id.backstage_icon);
         santa_img=findViewById(R.id.santa_img);
 
-        register_now=findViewById(R.id.register_now);
-        create_profile=findViewById(R.id.create_profile);
+//        register_now=findViewById(R.id.register_now);
+//        create_profile=findViewById(R.id.create_profile);
 
         Picasso.with(this).load("https://images.backstageaudition.com/backstage_new1.png").fit().into(backstage_icon);
         Picasso.with(this).load("https://images.backstageaudition.com/backstage_new2.png").fit().into(santa_img);
@@ -61,18 +61,24 @@ public class WebViewActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
 
-        register_now.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XW2MLM3LS4UF6")));
-            }
-        });
-        create_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XW2MLM3LS4UF6")));
-            }
-        });
+//          register_now.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(getApplicationContext(),WebViewActivity.class);
+//                intent.putExtra("Link","https://backstageaudition.com/contents/en-us/p1181_Backstage-Profile-Create-Your-Casting-Profile.html");
+//                startActivity(intent);
+////                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://backstageaudition.com/contents/en-us/p1181_Backstage-Profile-Create-Your-Casting-Profile.html")));
+//            }
+//        });
+//        create_profile.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(getApplicationContext(),WebViewActivity.class);
+//                intent.putExtra("Link","https://backstageaudition.com/contents/en-us/p1183_Create-an-acting-Portfolio.html");
+//                startActivity(intent);
+////                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://backstageaudition.com/contents/en-us/p1183_Create-an-acting-Portfolio.html")));
+//            }
+//        });
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

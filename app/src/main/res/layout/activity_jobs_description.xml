@@ -137,18 +137,18 @@
                     android:layout_alignParentRight="true" />
             </RelativeLayout>
 
-            <LinearLayout
-                android:id="@+id/adView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_alignParentBottom="true">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/adView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_alignParentBottom="true">-->
 
-                <FrameLayout
-                    android:id="@+id/fl_adplaceholder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/fl_adplaceholder"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content" />-->
+<!--            </LinearLayout>-->
 
             <Button
                 android:layout_width="wrap_content"

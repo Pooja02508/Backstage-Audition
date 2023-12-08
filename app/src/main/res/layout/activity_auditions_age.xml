@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".jobs.AuditionsAgeActivity"
     android:background="@color/white">
 
 
@@ -49,19 +48,19 @@
 
             </RelativeLayout>
 
-            <LinearLayout
-                android:id="@+id/adView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="50dp">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/adView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginBottom="50dp">-->
 
-                <FrameLayout
-                    android:id="@+id/fl_adplaceholder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/fl_adplaceholder"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content" />-->
+<!--            </LinearLayout>-->
 
         </LinearLayout>
 

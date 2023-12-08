@@ -55,74 +55,74 @@
     </LinearLayout>
     </ScrollView>
 
-    <LinearLayout
-        android:id="@+id/register_now"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_above="@id/bottom_nav_view"
-        android:orientation="horizontal"
-        android:background="@color/red"
-        android:layout_margin="5dp">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/register_now"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:layout_above="@id/bottom_nav_view"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="@color/red"-->
+<!--        android:layout_margin="5dp">-->
 
-        <pl.droidsonroids.gif.GifImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/alert_gif"
-            android:layout_toEndOf="@id/register_now"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="-5dp"
-            android:layout_gravity="center"
-            android:layout_above="@id/bottom_nav_view"/>
+<!--        <pl.droidsonroids.gif.GifImageView-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:src="@drawable/alert_gif"-->
+<!--            android:layout_toEndOf="@id/register_now"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginRight="-5dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_above="@id/bottom_nav_view"/>-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Register Now"
-            android:textSize="11dp"
-            android:textAllCaps="false"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:paddingLeft="5dp"
-            android:paddingRight="8dp"
-            android:textColor="@color/white"
-            android:layout_above="@id/bottom_nav_view" />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Register Now"-->
+<!--            android:textSize="11dp"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textStyle="bold"-->
+<!--            android:paddingLeft="5dp"-->
+<!--            android:paddingRight="8dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_above="@id/bottom_nav_view" />-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-    <LinearLayout
-        android:id="@+id/create_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_above="@id/bottom_nav_view"
-        android:orientation="horizontal"
-        android:background="@color/red"
-        android:layout_margin="5dp"
-        android:layout_toEndOf="@id/register_now">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/create_profile"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:layout_above="@id/bottom_nav_view"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="@color/red"-->
+<!--        android:layout_margin="5dp"-->
+<!--        android:layout_toEndOf="@id/register_now">-->
 
-        <pl.droidsonroids.gif.GifImageView
-            android:layout_width="50dp"
-            android:layout_height="60dp"
-            android:src="@drawable/message_gif"
-            android:layout_toEndOf="@id/register_now"
-            android:layout_marginBottom="5dp"
-            android:layout_marginRight="-5dp"
-            android:layout_gravity="center"
-            android:layout_above="@id/bottom_nav_view"/>
+<!--        <pl.droidsonroids.gif.GifImageView-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:src="@drawable/message_gif"-->
+<!--            android:layout_toEndOf="@id/register_now"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:layout_marginRight="-5dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_above="@id/bottom_nav_view"/>-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Create Portfolio"
-            android:textSize="11dp"
-            android:textAllCaps="false"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:paddingLeft="5dp"
-            android:paddingRight="8dp"
-            android:textColor="@color/white"
-            android:layout_above="@id/bottom_nav_view" />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Create Portfolio"-->
+<!--            android:textSize="11dp"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textStyle="bold"-->
+<!--            android:paddingLeft="5dp"-->
+<!--            android:paddingRight="8dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_above="@id/bottom_nav_view" />-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/live_chat"

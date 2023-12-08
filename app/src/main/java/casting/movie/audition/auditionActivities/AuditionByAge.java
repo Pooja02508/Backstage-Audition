@@ -19,6 +19,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
 
 import casting.movie.audition.activities.ChatbotActivity;
+import casting.movie.audition.activities.WebViewActivity;
 import casting.movie.audition.auditionActivities.PortfolioPassport;
 import casting.movie.audition.fragments.AuditionsFragment;
 import casting.movie.audition.fragments.BackstageJobsFragment;
@@ -85,13 +86,19 @@ public class AuditionByAge extends AppCompatActivity {
         register_now.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XW2MLM3LS4UF6")));
+                Intent intent=new Intent(getApplicationContext(), WebViewActivity.class);
+                intent.putExtra("Link","https://backstageaudition.com/contents/en-us/p1181_Backstage-Profile-Create-Your-Casting-Profile.html");
+                startActivity(intent);
+//                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://backstageaudition.com/contents/en-us/p1181_Backstage-Profile-Create-Your-Casting-Profile.html")));
             }
         });
         create_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XW2MLM3LS4UF6")));
+                Intent intent=new Intent(getApplicationContext(), WebViewActivity.class);
+                intent.putExtra("Link","https://backstageaudition.com/contents/en-us/p1183_Create-an-acting-Portfolio.html");
+                startActivity(intent);
+//                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://backstageaudition.com/contents/en-us/p1183_Create-an-acting-Portfolio.html")));
             }
         });
 

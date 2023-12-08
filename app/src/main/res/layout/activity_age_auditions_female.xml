@@ -71,19 +71,19 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"/>
 
-            <LinearLayout
-                android:id="@+id/adView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="50dp">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/adView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginBottom="50dp">-->
 
-                <FrameLayout
-                    android:id="@+id/fl_adplaceholder"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/fl_adplaceholder"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content" />-->
+<!--            </LinearLayout>-->
 
         </LinearLayout>
 

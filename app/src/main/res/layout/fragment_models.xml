@@ -72,18 +72,18 @@
                 android:text="@string/models"/>
 
 
-            <LinearLayout
-                android:id="@+id/adView1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="10dp">
+         <!--            <LinearLayout-->
+<!--                android:id="@+id/adView1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_marginBottom="10dp">-->
 
-                <FrameLayout
-                    android:id="@+id/fl_adplaceholder1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/fl_adplaceholder1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content" />-->
+<!--            </LinearLayout>-->
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -432,18 +432,18 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/adView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="10dp">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/adView2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_marginBottom="10dp">-->
 
-                <FrameLayout
-                    android:id="@+id/fl_adplaceholder2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/fl_adplaceholder2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content" />-->
+<!--            </LinearLayout>-->
 
 
             <Button
@@ -894,18 +894,18 @@
             </LinearLayout>
 
 
-            <LinearLayout
-                android:id="@+id/adView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="10dp">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/adView3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_marginBottom="10dp">-->
 
-                <FrameLayout
-                    android:id="@+id/fl_adplaceholder3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/fl_adplaceholder3"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content" />-->
+<!--            </LinearLayout>-->
 
 
             <LinearLayout
@@ -1033,18 +1033,18 @@
                 </LinearLayout>
 
 
-                <LinearLayout
-                    android:id="@+id/adView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="10dp">
+          <!--                <LinearLayout-->
+<!--                    android:id="@+id/adView4"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:layout_marginBottom="10dp">-->
 
-                    <FrameLayout
-                        android:id="@+id/fl_adplaceholder4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
+<!--                    <FrameLayout-->
+<!--                        android:id="@+id/fl_adplaceholder4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content" />-->
+<!--                </LinearLayout>-->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1086,18 +1086,18 @@
                 android:layout_marginBottom="20dp"/>
 
 
-            <LinearLayout
-                android:id="@+id/adView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="30dp">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/adView5"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_marginBottom="30dp">-->
 
-                <FrameLayout
-                    android:id="@+id/fl_adplaceholder5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+<!--                <FrameLayout-->
+<!--                    android:id="@+id/fl_adplaceholder5"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content" />-->
+<!--            </LinearLayout>-->
 
         </LinearLayout>
     </ScrollView>

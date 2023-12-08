@@ -31,6 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import casting.movie.audition.fragments.CountryFlagsFragment;
 import casting.movie.audition.fragments.StepOneFragment;
 import casting.movie.audition.NavigationDrawer;
 import casting.movie.audition.R;
@@ -55,6 +56,7 @@ public class SecondActivity extends AppCompatActivity {
         ViewPager viewPager = findViewById(R.id.viewPager);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new StepOneFragment());
+        viewPagerAdapter.addFragment(new CountryFlagsFragment());
         viewPager.setAdapter(viewPagerAdapter);
         loginBtn=findViewById(R.id.loginBtn);
         signUpBtn=findViewById(R.id.signUpBtn);
